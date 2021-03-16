@@ -8,11 +8,11 @@
         state: present
     - name: Install docker
       apt:
-        name: docker
+        name: docker.io
         state: present
     - name: start docker
-      systemctl:
-        name: docker
+      service:
+        name: docker.io
         state: started
         enabled: yes
     - name: Install docker-py python module
